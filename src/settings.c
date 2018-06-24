@@ -14,6 +14,7 @@ int options(){
 	unsigned i, lines, columns, choice = 0;
 	//чтобы настройки сохранялись.
 	FILE *sav=fopen("save.txt", "r");
+	if(!sav)return -6;
 	fscanf(sav,"%d%d",&repetition,&max_word_in_cycle);//
 	getmaxyx(stdscr, lines, columns);
 	while(enter==false){
@@ -68,6 +69,7 @@ int options(){
 		scanw("%d",&max_word_in_cycle);
 	} 
 	FILE *sav_temp=fopen("save_temp.txt", "w");
+	if(!sav_dict)return -6;
 	//сохранение нового значения
 	fprintf(sav_temp,"%d %d",repetition, max_word_in_cycle);
 	//освободить потоки, переименовать temp  в норм. файл

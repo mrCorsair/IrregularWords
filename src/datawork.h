@@ -38,9 +38,3 @@ int rawno(words *temp, words all_dict[], int rand_cycle[], unsigned i);
 #define H_sav_dict
 int sav_dict(words all_dict[], unsigned max);
 #endif
-/*
-#ifndef H_data_init
-#define H_data_init
-int data_init(words all_dict[], int max)
-#endif
-*/

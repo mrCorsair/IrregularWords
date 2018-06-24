@@ -13,7 +13,6 @@ int play(){
 	if(!dict)return -5;
 	if(!sav)return -5;
 	unsigned i,l, lines, columns, repetition, max_word_in_cycle, max=count_string(dict);
-	//bool enter=(false);
 	temp=(words*)malloc(sizeof(words));
 	temp->eng[0]=(char*)malloc(50*sizeof(char));
 	temp->eng[1]=(char*)malloc(50*sizeof(char));
@@ -40,7 +39,7 @@ int play(){
 		all_dict[i].rus=(char*)malloc((strlen(temp->rus)+1)*sizeof(char));
 		strcpy(all_dict[i].rus,temp->rus);
 		if(!(all_dict[i].eng[0])||!(all_dict[i].eng[1])||!(all_dict[i].eng[2])||!(all_dict[i].rus)){
-			printw("ошибка выделения памяти ALL_DICT\n");
+			printf("ошибка выделения памяти ALL_DICT\n");
 			return -3;
 		}
 	}

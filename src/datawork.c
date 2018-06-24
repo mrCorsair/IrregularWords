@@ -47,37 +47,6 @@ int seek_str(FILE *f, long j){
 	}
 	return 0;
 }
-/*
-int data_init(words *all_dict, int max){
-	FILE *dict=fopen("dictionary.txt", "r");
-	if(!dict)return -1;
-	words *temp=NULL;
-	temp=(words*)malloc(sizeof(words));
-	temp->eng[0]=(char*)malloc(50*sizeof(char));
-	temp->eng[1]=(char*)malloc(50*sizeof(char));
-	temp->eng[2]=(char*)malloc(50*sizeof(char));
-	temp->rus=(char*)malloc(50*sizeof(char));
-	if(!(temp->eng[0])||!(temp->eng[1])||!(temp->eng[2])||!(temp->rus))return -2;
-	words all_dict[max];//инициализируем массив структур
-	for(i=0;i<max;i++){
-		fscanf(dict,"%d%d%s%s%s%s%d",&(temp->p),&(temp->n),temp->eng[0],temp->eng[1],temp->eng[2],temp->rus,&(temp->sp));
-		all_dict[i].p=temp->p;
-		all_dict[i].n=temp->n;
-		all_dict[i].sp=temp->sp;
-		all_dict[i].sn=temp->sn;
-		all_dict[i].eng[0]=(char*)malloc(strlen(temp->eng[0])*sizeof(char));		
-		strcpy(all_dict[i].eng[0],temp->eng[0]);
-		all_dict[i].eng[1]=(char*)malloc(strlen(temp->eng[1])*sizeof(char));
-		strcpy(all_dict[i].eng[1],temp->eng[1]);
-		all_dict[i].eng[2]=(char*)malloc(strlen(temp->eng[2])*sizeof(char));
-		strcpy(all_dict[i].eng[2],temp->eng[2]);
-		all_dict[i].rus=(char*)malloc(strlen(temp->rus)*sizeof(char));
-		strcpy(all_dict[i].rus,temp->rus);
-		if(!(all_dict[i].eng[0])||!(all_dict[i].eng[1])||!(all_dict[i].eng[2])||!(all_dict[i].rus))return -3;
-	}
-	fclose(dict);
-	return 0;
-}*/
 
 int random_cycle(unsigned max_word_in_cycle, int *rand_cycle, unsigned repetition,unsigned max, words* all_dict){		
 	int i,k,j,flag;
