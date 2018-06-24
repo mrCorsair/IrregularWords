@@ -15,6 +15,10 @@ void chow_dictonary(){
 	temp->eng[1]=(char*)malloc(50*sizeof(char));
 	temp->eng[2]=(char*)malloc(50*sizeof(char));
 	temp->rus=(char*)malloc(50*sizeof(char));
+	if(!(temp->eng[0])||!(temp->eng[1])||!(temp->eng[2])||!(temp->rus)){
+		printw("ошибка выделения памяти TEMP3\n");
+		return;
+	}
 
 	getmaxyx(stdscr, lines, columns);
 	FILE *dict=fopen("dictionary.txt", "r");

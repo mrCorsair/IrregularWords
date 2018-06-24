@@ -2,6 +2,7 @@ flags = -Wall -Werror -std=c11
 
 prog:bin build bin/prog
 test:bin build bin/test
+all:prog test
 
 bin/prog: build/main.o build/settings.o build/exercise.o build/print_functions.o build/datawork.o
 	gcc $(flags) build/main.o build/settings.o build/exercise.o build/print_functions.o build/datawork.o -o bin/prog -lncursesw

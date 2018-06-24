@@ -1,9 +1,9 @@
 0 0 be was been быть 0
-0 1 beat beat beaten бить 0
+0 0 beat beat beaten бить 0
 0 0 become became become становиться 0
 0 0 begin began begun начинать 0
 0 0 bend bent bent гнуть 0
-0 1 bet bet bet держать_пари 0
+0 0 bet bet bet держать_пари 0
 0 0 bite bit bitten кусать 0
 0 0 blow blew blown выдыхать 0
 0 0 break broke broken разрушать 0
@@ -12,7 +12,7 @@
 0 0 buy bought bought покупать 0
 0 0 catch caught caught ловить 0
 0 0 choose chose chosen выбирать 0
-0 1 come came come приходить 0
+0 0 come came come приходить 0
 0 0 cost cost cost стоить 0
 0 0 cut cut cut резать 0
 0 0 deal dealt dealt иметь_дело 0
@@ -34,7 +34,7 @@
 0 0 get got got получать 0
 0 0 give gave given дать 0
 0 0 go went gone идти 0
-0 1 grow grew grown расти 0
+0 0 grow grew grown расти 0
 0 0 hang hung hung вешать 0
 0 0 have had had иметь 0
 0 0 hear heard heard слышать 0
@@ -70,14 +70,14 @@
 0 0 set set set назначать 0
 0 0 shake shook shaken трясти 0
 0 0 shine shone shone светить 0
-0 1 shoot shot shot стрелять 0
+0 0 shoot shot shot стрелять 0
 0 0 show showed showed показывать 0
 0 0 shut shut shut запирать 0
 0 0 sing sang sung петь 0
-0 1 sink sank sunk тонуть 0
+0 0 sink sank sunk тонуть 0
 0 0 sit sat sat сидеть 0
 0 0 sleep slept slept спать 0
-1 0 speak spoke spoken разговаривать 1
+0 0 speak spoke spoken разговаривать 0
 0 0 spend spent spent тратить 0
 0 0 stand stood stood стоять 0
 0 0 steal stole stolen воровать 0
@@ -89,7 +89,7 @@
 0 0 swing swung swung вертеться 0
 0 0 take took taken брать 0
 0 0 teach taught taught учить 0
-0 1 tear tore torn рвать 0
+0 0 tear tore torn рвать 0
 0 0 tell told told рассказывать 0
 0 0 think thought thought думать 0
 0 0 throw threw thrown бросать 0
