@@ -8,7 +8,7 @@
 
 int Randd(int zern,int max)
 {
-	srand(time(NULL)+zern);
+	srand(time(NULL)*rand()/RAND_MAX+zern*zern);
 	return (double)rand()/RAND_MAX*max;
 }
 
@@ -87,16 +87,16 @@ int random_cycle(unsigned max_word_in_cycle, int *rand_cycle, unsigned repetitio
 			k=Randd(i,max);//рандомный номер
 			flag=0;
 			for(j=0;j<max_word_in_cycle;j++){
-				if((rand_cycle[i]==rand_cycle[j])&&(j!=i)&&(rand_cycle[j]!=-1)){//убираем повторы
+				if(k==rand_cycle[j]){//убираем повторы
 					flag=1;
 				}
 			}
-			while(((all_dict[k].p)>=repetition)||flag==1){
+			while(((all_dict[k].sp)>=repetition)||flag==1){
 				k++;
-				if(k>max-1)k=0;
+				if(k==max)k=0;
 				flag=0;
 				for(j=0;j<max_word_in_cycle;j++){
-					if((rand_cycle[i]==rand_cycle[j])&&(j!=i)&&(rand_cycle[j]!=-1)){//убираем повторы
+					if(k==rand_cycle[j]){//убираем повторы
 						flag=1;
 					}
 				}

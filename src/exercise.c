@@ -55,12 +55,16 @@ int play(){
 			if((all_dict[i].sp)>=repetition)l++;
 		}
 		if(max==l){
+			clear();
 			mvwprintw(stdscr, (lines/2), 4, 
-			"Вы выучили все слова! Если хотите повторить, можете увеличить нужное количество верных ответов или сбросить статистику.");
+			"Вы выучили все слова! Если хотите повторить,\n можете увеличить нужное количество верных ответов\n или сбросить статистику.");
+			getch();
+			sav_dict(all_dict, max);
 			return 1;
 		}
 		if((max-l)<max_word_in_cycle)max_word_in_cycle=max-l;//берем сколько есть
 		//берем случайные слова на пустые места и отвеченные слова
+		mvwprintw(stdscr, (lines/2), 4, "!!");
 		random_cycle(max_word_in_cycle, rand_cycle, repetition, max, all_dict);
 		for(i=0;i<max_word_in_cycle;i++){
 			clear();
