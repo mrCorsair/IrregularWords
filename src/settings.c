@@ -69,7 +69,7 @@ int options(){
 		scanw("%d",&max_word_in_cycle);
 	} 
 	FILE *sav_temp=fopen("save_temp.txt", "w");
-	if(!sav_dict)return -6;
+	//if(!sav_dict)return -6;
 	//сохранение нового значения
 	fprintf(sav_temp,"%d %d",repetition, max_word_in_cycle);
 	//освободить потоки, переименовать temp  в норм. файл
