@@ -80,7 +80,7 @@ int stat_null(){
 		FILE *dict=fopen("dictionary.txt", "r");
 		FILE *dict_temp=fopen("dict_temp.txt", "w");
 		if(!dict)return -5;
-		if(!dict_temp)return -5;
+		//if(!dict_temp)return -5;
 		words *temp;
 		int i;
 		int max; 
@@ -108,7 +108,7 @@ int stat_null(){
 int sav_dict( words all_dict[], unsigned max){	
 	int i;	
 	FILE *dict_t=fopen("dict_temp.txt", "w");
-	if(!dict_t)return -5;
+	//if(!dict_t)return -5;
 	for(i=0;i<max;i++){
 		fprintf(dict_t,"%d %d %s %s %s %s %d\n", all_dict[i].p, all_dict[i].n, all_dict[i].eng[0],
 			all_dict[i].eng[1],all_dict[i].eng[2],all_dict[i].rus,all_dict[i].sp);
