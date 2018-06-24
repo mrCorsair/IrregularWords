@@ -12,9 +12,13 @@ int Randd(int zern,int max)
 }
 
 int rawno(words *temp, words all_dict[], int rand_cycle[], unsigned i){
-	if((strcmp(temp->eng[0],all_dict[rand_cycle[i]].eng[0])==0)&&
-		(strcmp(temp->eng[1],all_dict[rand_cycle[i]].eng[1])==0)&&
-		(strcmp(temp->eng[2],all_dict[rand_cycle[i]].eng[2])==0)){
+	int rasn='A'-'a';
+	if((strcmp(temp->eng[0]+1,all_dict[rand_cycle[i]].eng[0]+1)==0)&&
+		(strcmp(temp->eng[1]+1,all_dict[rand_cycle[i]].eng[1]+1)==0)&&
+		(strcmp(temp->eng[2]+1,all_dict[rand_cycle[i]].eng[2]+1)==0)&&
+		((temp->eng[0][0]==all_dict[rand_cycle[i]].eng[0][0])||(((temp->eng[0][0])-(all_dict[rand_cycle[i]].eng[0][0]))==rasn))&&
+		((temp->eng[1][0]==all_dict[rand_cycle[i]].eng[1][0])||(((temp->eng[1][0])-(all_dict[rand_cycle[i]].eng[1][0]))==rasn))&&
+		((temp->eng[2][0]==all_dict[rand_cycle[i]].eng[2][0])||(((temp->eng[2][0])-(all_dict[rand_cycle[i]].eng[2][0]))==rasn))){
 		return 1;
 	}else{
 		return 0;

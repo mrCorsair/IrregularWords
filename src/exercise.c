@@ -34,7 +34,11 @@ int play(){
 		strcpy(all_dict[i].eng[2],temp->eng[2]);
 		all_dict[i].rus=(char*)malloc((strlen(temp->rus)+1)*sizeof(char));
 		strcpy(all_dict[i].rus,temp->rus);
-		if(!(all_dict[i].eng[0])||!(all_dict[i].eng[1])||!(all_dict[i].eng[2])||!(all_dict[i].rus))return -3;
+		if(!(all_dict[i].eng[0])||!(all_dict[i].eng[1])||!(all_dict[i].eng[2])||!(all_dict[i].rus)){
+			printf("ERROR MEMORY");
+			getch();
+			return -3;
+		}
 	}
 	fscanf(sav,"%d%d", &repetition, &max_word_in_cycle);
 	clear();
