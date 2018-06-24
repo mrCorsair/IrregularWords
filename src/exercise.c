@@ -10,6 +10,8 @@ int play(){
 	words *temp;
 	FILE *dict=fopen("dictionary.txt", "r");
 	FILE *sav=fopen("save.txt", "r");
+	if(!dict)return -5;
+	if(!sav)return -5;
 	unsigned i,l, lines, columns, repetition, max_word_in_cycle, max=count_string(dict);
 	//bool enter=(false);
 	temp=(words*)malloc(sizeof(words));
@@ -17,7 +19,10 @@ int play(){
 	temp->eng[1]=(char*)malloc(50*sizeof(char));
 	temp->eng[2]=(char*)malloc(50*sizeof(char));
 	temp->rus=(char*)malloc(50*sizeof(char));
-	if(!(temp->eng[0])||!(temp->eng[1])||!(temp->eng[2])||!(temp->rus))return -2;
+	if(!(temp->eng[0])||!(temp->eng[1])||!(temp->eng[2])||!(temp->rus)){
+		printf("ошибка выделения памяти TEMP\n");
+		return -3;
+	}
 	
 	getmaxyx(stdscr, lines, columns);
 	words all_dict[max];
@@ -35,8 +40,7 @@ int play(){
 		all_dict[i].rus=(char*)malloc((strlen(temp->rus)+1)*sizeof(char));
 		strcpy(all_dict[i].rus,temp->rus);
 		if(!(all_dict[i].eng[0])||!(all_dict[i].eng[1])||!(all_dict[i].eng[2])||!(all_dict[i].rus)){
-			printf("ERROR MEMORY");
-			getch();
+			printw("ошибка выделения памяти ALL_DICT\n");
 			return -3;
 		}
 	}
