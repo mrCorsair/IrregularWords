@@ -23,6 +23,14 @@ void chow_dictonary(){
 	getmaxyx(stdscr, lines, columns);
 	FILE *dict=fopen("dictionary.txt", "r");
 	FILE *sav=fopen("save.txt", "r");
+	if(!dict){
+		printf("error opening the file 1");
+		return;
+	}
+	if(!sav){
+		printf("error opening the file 2");
+		return;
+	}
 	int must;
 	fscanf(sav,"%d",&must);
 	fclose(sav);
